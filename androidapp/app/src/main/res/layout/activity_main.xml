@@ -11,13 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cpcrasher.survival.MainActivity">
 
+
+
     <LinearLayout
         android:id="@+id/tsunami_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Hello Woraassld!"
-        android:id="@+id/txtMain" 
 
         android:background="#88b6e6"
         android:clickable="true"
