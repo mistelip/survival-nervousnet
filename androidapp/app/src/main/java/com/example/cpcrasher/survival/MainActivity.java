@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView txt = (TextView) findViewById(R.id.txtMain);
+        TextView txt = (TextView) findViewById(R.id.earthquake_txt);
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

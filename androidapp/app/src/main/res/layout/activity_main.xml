@@ -103,7 +103,7 @@
         android:layout_alignParentEnd="true">
 
         <ImageView
-            android:id="@+id/erathquake_img"
+            android:id="@+id/earthquake_img"
             android:layout_width="114dp"
             android:layout_height="94dp"
             android:layout_gravity="center_vertical"
@@ -111,7 +111,7 @@
             android:src="@drawable/earthquake" />
 
         <TextView
-            android:id="@+id/erathquake_txt"
+            android:id="@+id/earthquake_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
