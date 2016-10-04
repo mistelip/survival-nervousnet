@@ -15,12 +15,13 @@ import ch.ethz.coss.nervousnet.lib.ErrorReading;
 import ch.ethz.coss.nervousnet.lib.LibConstants;
 import ch.ethz.coss.nervousnet.lib.LightReading;
 import ch.ethz.coss.nervousnet.lib.LocationReading;
+import ch.ethz.coss.nervousnet.lib.NervousnetSensorDataListener;
 import ch.ethz.coss.nervousnet.lib.NervousnetServiceConnectionListener;
 import ch.ethz.coss.nervousnet.lib.NervousnetServiceController;
 import ch.ethz.coss.nervousnet.lib.SensorReading;
 
 
-public class AccelerometerActivity extends Activity implements NervousnetServiceConnectionListener{
+public class AccelerometerActivity extends Activity implements NervousnetServiceConnectionListener, NervousnetSensorDataListener{
     NervousnetServiceController nervousnetServiceController;
 
     Runnable m_statusChecker;
@@ -117,5 +118,10 @@ public class AccelerometerActivity extends Activity implements NervousnetService
 
     void stopRepeatingTask() {
         m_handler.removeCallbacks(m_statusChecker);
+    }
+
+    @Override
+    public void onSensorDataReady(SensorReading reading) {
+        Toast.makeText(this, "ASLFAOIFH", Toast.LENGTH_SHORT).show();
     }
 }
