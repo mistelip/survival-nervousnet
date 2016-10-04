@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">survival</string>
+
     <string name="title_activity_accelerometer">AccelerometerActivity</string>
+    <string name="app_name">Survival</string>
 </resources>
