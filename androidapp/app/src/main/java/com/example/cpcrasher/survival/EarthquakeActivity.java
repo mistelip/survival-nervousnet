@@ -18,12 +18,13 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_earthquake);
 
 
-        CheckBox test = (CheckBox) findViewById(R.id.injuredCheckBoxEarth);
-        test.setOnClickListener(new View.OnClickListener() {
+        CheckBox injuredCheckBox = (CheckBox) findViewById(R.id.injuredCheckBoxEarth);
+        injuredCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 emptyQuest = false;
             }
+
         });
 
         Button send_butt = (Button) findViewById(R.id.sendButtEarth);

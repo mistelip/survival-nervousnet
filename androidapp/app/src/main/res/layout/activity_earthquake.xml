@@ -11,18 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cpcrasher.survival.EarthquakeActivity">
 
-    <Button
-        android:text="Send"
-        android:background="#a1cc7c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sendButtEarth"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <CheckBox
         android:id="@+id/injuredCheckBoxEarth"
         android:layout_width="wrap_content"
@@ -34,68 +22,23 @@
         android:button="@null"
         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <CheckBox
-        android:id="@+id/stuckCheckBoxEarth"
-        android:text="@string/stuck_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/injuredCheckBoxEarth"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <CheckBox
-        android:id="@+id/urgentHelpCheckBoxEarth"
-        android:text="@string/urgentHelp_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/stuckCheckBoxEarth"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:id="@+id/buildingDestructionText"
-        android:text="@string/buildingDestruction_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="22dp"
-        android:layout_below="@+id/urgentHelpCheckBoxEarth"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:id="@+id/buildingDestructionSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:popupBackground="@android:color/holo_green_light"
+        android:popupBackground="@android:color/white"
         android:layout_below="@+id/buildingDestructionText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:entries="@array/buildingDestruction_arrays"
-        android:prompt="@string/buildingDestruction_text"/>
-
-    <TextView
-        android:id="@+id/survivalDaysText"
-        android:text="@string/survivalDays_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:prompt="@string/buildingDestruction_text"
+        android:contextClickable="true"
+        android:backgroundTint="@android:color/holo_green_dark" />
 
     <Spinner
         android:id="@+id/survivalDaysSpinner"
@@ -103,9 +46,82 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/survivalDaysText"
+        android:popupBackground="@android:color/white"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:entries="@array/survivalDays_arrays"
-        android:prompt="@string/survivalDays_text"/>
+        android:prompt="@string/survivalDays_text"
+        android:backgroundTint="@android:color/holo_green_dark"
+        style="@style/Widget.AppCompat.Spinner" />
+
+
+    <CheckBox
+        android:id="@+id/urgentHelpCheckBoxEarth"
+        android:text="@string/urgentHelp_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_below="@+id/stuckCheckBoxEarth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/buildingDestructionText"
+        android:text="@string/buildingDestruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/urgentHelpCheckBoxEarth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/survivalDaysText"
+        android:text="@string/survivalDays_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/buildingDestructionSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/stuckCheckBoxEarth"
+        android:text="@string/stuck_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:layout_below="@+id/injuredCheckBoxEarth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:text="Send"
+        android:background="#a1cc7c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendButtEarth"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

@@ -23,7 +23,7 @@
         android:layout_alignParentEnd="true" />
 
     <CheckBox
-        android:text="This would be a question"
+        android:text="@string/injured_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/injuredCheckBoxTerr"

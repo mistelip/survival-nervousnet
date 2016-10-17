@@ -11,8 +11,6 @@
     <string name="urgentHelp_question">Someone needs urgent help</string>
     <string name="potentialDanger_question">Someone is still in danger</string>
 
-
-
     <string name="buildingDestruction_text">Level of building destruction:</string>
     <string-array name="buildingDestruction_arrays">
         <item>None</item>
