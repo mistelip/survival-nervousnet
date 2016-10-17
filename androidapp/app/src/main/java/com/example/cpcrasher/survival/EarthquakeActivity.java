@@ -18,7 +18,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_earthquake);
 
 
-        CheckBox test = (CheckBox) findViewById(R.id.checkBox);
+        CheckBox test = (CheckBox) findViewById(R.id.injuredCheckBoxEarth);
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,20 +26,23 @@ public class EarthquakeActivity extends AppCompatActivity {
             }
         });
 
-        Button send_butt = (Button) findViewById(R.id.send_earth_butt);
+        Button send_butt = (Button) findViewById(R.id.sendButtEarth);
         send_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EarthquakeActivity.this, MainActivity.class);
-                //intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 if(emptyQuest){
                     Toast toast = Toast.makeText(getApplicationContext(),"You need to fill the quest!",Toast.LENGTH_SHORT);
                     toast.show();
                 }else{
-                    startActivity(intent);
+                    sendDataToserver();
+                    finish();
                 }
 
             }
         });
+    }
+
+    public void sendDataToserver(){
+        // TODO: Take quest not empty variables and values and send them to Nervousnet Servers
     }
 }
