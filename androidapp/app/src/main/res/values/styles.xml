@@ -17,4 +17,22 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="CheckBoxEarth" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorEarth</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxTsu" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorTsu</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxTerr" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorTerr</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
 </resources>
