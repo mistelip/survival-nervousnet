@@ -10,24 +10,104 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cpcrasher.survival.TerroristActivity">
 
+    <CheckBox
+        android:id="@+id/injuredCheckBoxTerr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/injured_question"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/stuckCheckBoxTerr"
+        android:text="@string/stuck_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:layout_below="@+id/injuredCheckBoxTerr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
     <Button
         android:text="Send"
         android:background="#f1aaaa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:id="@+id/send_terr_butt"
+        android:id="@+id/sendButtTerr"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <CheckBox
-        android:text="@string/injured_question"
+        android:id="@+id/urgentHelpCheckBoxTerr"
+        android:text="@string/urgentHelp_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/injuredCheckBoxTerr"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:layout_below="@+id/stuckCheckBoxTerr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/potentialDangerCheckBoxTerr"
+        android:text="@string/potentialDanger_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/urgentHelpCheckBoxTerr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:id="@+id/buildingDestructionSpinnerTerr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:popupBackground="@drawable/red"
+        android:entries="@array/buildingDestruction_arrays"
+        android:prompt="@string/buildingDestruction_text"
+        android:contextClickable="true"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/buildingDestructionTextTerr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/buildingDestructionTextTerr"
+        android:text="@string/buildingDestruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/potentialDangerCheckBoxTerr"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

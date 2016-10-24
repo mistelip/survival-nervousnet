@@ -10,24 +10,143 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cpcrasher.survival.TsunamiActivity">
 
+
+    <CheckBox
+        android:id="@+id/injuredCheckBoxTsu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/injured_question"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/survivalDaysSpinnerTsu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/survivalDaysTextTsu"
+        android:popupBackground="@drawable/blue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:entries="@array/survivalDays_arrays"
+        android:prompt="@string/survivalDays_text"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        style="@style/Widget.AppCompat.Spinner" />
+
+
+    <CheckBox
+        android:id="@+id/urgentHelpCheckBoxTsu"
+        android:text="@string/urgentHelp_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_below="@+id/stuckCheckBoxTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/stuckCheckBoxTsu"
+        android:text="@string/stuck_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:layout_below="@+id/injuredCheckBoxTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
     <Button
         android:text="Send"
         android:background="#88b6e6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:id="@+id/send_tsunami_butt"
+        android:id="@+id/sendButtTsu"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <CheckBox
-        android:text="This would be a question"
+    <Spinner
+        android:id="@+id/waterLevelSpinnerTsu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:popupBackground="@drawable/blue"
+        android:entries="@array/waterLevel_arrays"
+        android:prompt="@string/waterLevel_text"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_below="@+id/waterLevelTextTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/survivalDaysTextTsu"
+        android:text="@string/survivalDays_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/injuredCheckBoxTsu"
-        android:layout_alignParentTop="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/buildingDestructionSpinnerTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/waterLevelTextTsu"
+        android:text="@string/waterLevel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/survivalDaysSpinnerTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/buildingDestructionSpinnerTsu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:popupBackground="@drawable/blue"
+        android:entries="@array/buildingDestruction_arrays"
+        android:prompt="@string/buildingDestruction_text"
+        android:contextClickable="true"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_below="@+id/buildingDestructionTextTsu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/buildingDestructionTextTsu"
+        android:text="@string/buildingDestruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="14dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/urgentHelpCheckBoxTsu"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
