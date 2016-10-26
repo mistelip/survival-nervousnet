@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class TsunamiActivity extends AppCompatActivity {
 
-    boolean emptyQuest = true;
+    boolean emptyQuest = false;
 
     // Earthquake parameters
     boolean injured = false;
@@ -62,7 +62,6 @@ public class TsunamiActivity extends AppCompatActivity {
         final Spinner buildingDestructionSpin = (Spinner) findViewById(R.id.buildingDestructionSpinnerTsu);
         buildingDestructionSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                emptyQuest = false;
                 buildingDestruction = buildingDestructionSpin.getSelectedItemPosition();
                 //Toast toast = Toast.makeText(getApplicationContext(),String.valueOf(buildVal),Toast.LENGTH_SHORT);
                 //toast.show();
@@ -75,7 +74,6 @@ public class TsunamiActivity extends AppCompatActivity {
         final Spinner survivalSpin = (Spinner) findViewById(R.id.survivalDaysSpinnerTsu);
         survivalSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                emptyQuest = false;
                 survivalDays = survivalSpin.getSelectedItemPosition();
                 //Toast toast = Toast.makeText(getApplicationContext(),String.valueOf(buildVal),Toast.LENGTH_SHORT);
                 //toast.show();
@@ -88,7 +86,6 @@ public class TsunamiActivity extends AppCompatActivity {
         final Spinner waterLevelSpin = (Spinner) findViewById(R.id.waterLevelSpinnerTsu);
         waterLevelSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                emptyQuest = false;
                 waterLevel = waterLevelSpin.getSelectedItemPosition();
                 //Toast toast = Toast.makeText(getApplicationContext(),String.valueOf(buildVal),Toast.LENGTH_SHORT);
                 //toast.show();

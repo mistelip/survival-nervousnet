@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class EarthquakeActivity extends AppCompatActivity {
 
-    boolean emptyQuest = true;
+    boolean emptyQuest = false;
 
     // Earthquake parameters
     boolean injured = false;
@@ -64,7 +64,6 @@ public class EarthquakeActivity extends AppCompatActivity {
         final Spinner buildingDestructionSpin = (Spinner) findViewById(R.id.buildingDestructionSpinner);
         buildingDestructionSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                emptyQuest = false;
                 buildingDestruction = buildingDestructionSpin.getSelectedItemPosition();
                 //Toast toast = Toast.makeText(getApplicationContext(),String.valueOf(buildVal),Toast.LENGTH_SHORT);
                 //toast.show();
@@ -77,7 +76,6 @@ public class EarthquakeActivity extends AppCompatActivity {
         final Spinner survivalSpin = (Spinner) findViewById(R.id.survivalDaysSpinner);
         survivalSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                emptyQuest = false;
                 survivalDays = survivalSpin.getSelectedItemPosition();
 
                 //Toast toast = Toast.makeText(getApplicationContext(),String.valueOf(buildVal),Toast.LENGTH_SHORT);
