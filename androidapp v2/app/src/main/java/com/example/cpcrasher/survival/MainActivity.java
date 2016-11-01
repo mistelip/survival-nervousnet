@@ -15,7 +15,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         /*
+        TextView earthquake_txt = (TextView) findViewById(R.id.earthquake_txt);
+        earthquake_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AccelerometerActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+        //*/
+
         // Earthquake quest
         //TextView earthquake_txt = (TextView) findViewById(R.id.earthquake_txt);
         LinearLayout earthquake_butt = (LinearLayout) findViewById(R.id.earthquake_button);
@@ -54,6 +66,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        */
     }
 }
