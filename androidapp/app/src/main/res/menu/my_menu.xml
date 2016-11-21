@@ -1,0 +1,25 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:title="@string/action_main"
+        android:id="@+id/menu_main"
+        android:visible="true"
+        android:checkable="false"
+        android:icon="@android:color/black" />
+
+    <item android:title="@string/action_map"
+        android:id="@+id/menu_map"
+        android:icon="@android:color/black"
+        android:visible="true" />
+    <item android:title="@string/action_tips"
+        android:id="@+id/menu_tips"
+        android:icon="@android:color/black"
+        android:visible="true" />
+    <item android:title="@string/action_settings"
+        android:id="@+id/menu_settings"
+        android:icon="@android:color/black"
+        android:visible="true"
+        android:enabled="false" />
+
+</menu>
