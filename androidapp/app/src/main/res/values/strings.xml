@@ -11,6 +11,11 @@
     <string name="urgentHelp_question">Someone needs urgent help</string>
     <string name="potentialDanger_question">Someone is still in danger</string>
 
+    <string name="action_settings">Settings</string>
+    <string name="action_map">Map statistics</string>
+    <string name="action_tips">Survival tips</string>
+    <string name="action_main">Answer quiz</string>
+
     <string name="buildingDestruction_text">Level of building destruction:</string>
     <string-array name="buildingDestruction_arrays">
         <item>None</item>
