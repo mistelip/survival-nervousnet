@@ -16,6 +16,11 @@
     <string name="action_tips">Survival tips</string>
     <string name="action_main">Answer quiz</string>
 
+    <string name="basicNeeds_butt">Basic needs</string>
+    <string name="suppNeeds_butt">Supporting Needs</string>
+    <string name="surroundings_butt">Surroundings state</string>
+    <string name="extra_butt">Extra information</string>
+
     <string name="buildingDestruction_text">Level of building destruction:</string>
     <string-array name="buildingDestruction_arrays">
         <item>None</item>

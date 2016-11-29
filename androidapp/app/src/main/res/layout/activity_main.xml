@@ -9,118 +9,63 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.cpcrasher.survival.MainActivity">
+    tools:context="com.example.cpcrasher.survival.mainActivity.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/tsunami_button"
+
+    <Button
+        android:text="@string/suppNeeds_butt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#88b6e6"
-        android:clickable="true"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/earthquake_button"
+        android:id="@+id/suppNeeds_butt"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/basicNeeds_butt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:focusable="true">
+        android:height="70dp"
+        android:background="@color/colorAccent"
+        android:minHeight="54dp" />
 
-        <ImageView
-            android:id="@+id/tsunami_img"
-            android:layout_width="114dp"
-            android:layout_height="94dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/wave" />
-
-        <TextView
-            android:id="@+id/tsunami_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
-            android:text="      Tsunami"
-            android:layout_weight="0.05"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/terrorist_button"
+    <Button
+        android:text="@string/surroundings_butt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#f1aaaa"
-        android:clickable="true"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_below="@+id/tsunami_button"
+        android:id="@+id/surroundings_butt"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/suppNeeds_butt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:focusable="true">
+        android:height="70dp"
+        android:background="?android:attr/colorPressedHighlight" />
 
-        <ImageView
-            android:id="@+id/terrorist_img"
-            android:layout_width="114dp"
-            android:layout_height="94dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/bomb" />
-
-        <TextView
-            android:id="@+id/terrorist_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
-            android:text="      Terrorist attack"
-            android:layout_weight="0.05"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/earthquake_button"
+    <Button
+        android:text="@string/extra_butt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#a1cc7c"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:clickable="true"
-        tools:textAlignment="center"
-        android:focusable="true"
-        android:layout_marginTop="91dp"
+        android:id="@+id/extra_butt"
+        android:layout_below="@+id/surroundings_butt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:height="70dp"
+        android:background="@color/colorEarth" />
+
+    <Button
+        android:text="@string/basicNeeds_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/basicNeeds_butt"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:id="@+id/earthquake_img"
-            android:layout_width="114dp"
-            android:layout_height="94dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/earthquake" />
-
-        <TextView
-            android:id="@+id/earthquake_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
-            android:text="      Earthquake"
-            android:layout_weight="0.05"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:height="70dp"
+        android:background="@android:color/holo_red_light" />
 </RelativeLayout>
