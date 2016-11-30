@@ -3,9 +3,14 @@
     <color name="colorPrimary">#000000</color> <!-- Toolbar app color -->
     <color name="colorPrimaryDark">#FF5722</color> <!-- Top app color -->
     <color name="colorAccent">#ffab91</color> <!-- Buttons selection color -->
-    <color name="colorAccentWhite">#FFFFFF</color> <!-- Buttons selection color -->
+    <color name="colorAccentWhite">#ffffff</color> <!-- Buttons selection color -->
 
     <color name="colorEarth">#a1cc7c</color>
     <color name="colorTsu">#88b6e6</color>
     <color name="colorTerr">#f1aaaa</color>
+
+    <color name="colorBasic">#FF6666</color>
+    <color name="colorSupp">#FF9C5A</color>
+    <color name="colorSurr">#ffc95a</color>
+    <color name="colorExtra">#A8DF8C</color>
 </resources>

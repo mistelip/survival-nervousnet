@@ -19,7 +19,7 @@
 
     <style name="CheckBoxEarth" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
-        <item name="colorControlActivated">@color/colorEarth</item> <!-- fill color -->
+        <item name="colorControlActivated">@color/colorTerr</item> <!-- fill color -->
         <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
     </style>
 
@@ -32,6 +32,36 @@
     <style name="CheckBoxTerr" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
         <item name="colorControlActivated">@color/colorTerr</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxBasic" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorBasic</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxSupp" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorSupp</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxSurr" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorSurr</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="CheckBoxExtra" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorExtra</item> <!-- fill color -->
+        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
+    </style>
+
+    <style name="EditTextExtra" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal"> @color/colorPrimary</item> <!-- border color -->
+        <item name="colorControlActivated">@color/colorExtra</item> <!-- fill color -->
         <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
     </style>
 

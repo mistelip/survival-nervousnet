@@ -12,7 +12,7 @@
 
     <Button
         android:text="Send"
-        android:background="#a1cc7c"
+        android:background="@color/colorExtra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sendButtExtras"
@@ -20,6 +20,92 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/documentsCheckBox"
+        android:text="@string/documentation_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxExtra"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/friendsCheckBox"
+        android:text="@string/lostFriends_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxExtra"
+        android:layout_below="@+id/documentsCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/namesText"
+        android:text="@string/namesFriends_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_below="@+id/friendsCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/lostFriendsNames_txt"
+        android:textSize="16sp"
+        android:layout_below="@+id/namesText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:theme="@style/EditTextExtra"
+        android:textColor="?android:attr/textColorAlertDialogListItem"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/commText"
+        android:text="@string/communicate_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_below="@+id/lostFriendsNames_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/commText"
+        android:id="@+id/communication_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:theme="@style/EditTextExtra"
+        android:textSize="16sp"
         android:layout_alignParentEnd="true" />
 
 
