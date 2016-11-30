@@ -24,8 +24,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:height="70dp"
-        android:background="@color/colorAccent"
-        android:minHeight="54dp" />
+        android:background="@color/colorSupp"
+        android:minHeight="54dp"
+        android:textSize="17sp" />
 
     <Button
         android:text="@string/surroundings_butt"
@@ -39,7 +40,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:height="70dp"
-        android:background="?android:attr/colorPressedHighlight" />
+        android:textSize="17dp"
+        android:background="@color/colorSurr" />
 
     <Button
         android:text="@string/extra_butt"
@@ -49,23 +51,25 @@
         android:layout_below="@+id/surroundings_butt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="13dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:height="70dp"
-        android:background="@color/colorEarth" />
+        android:textSize="17dp"
+        android:background="@color/colorExtra" />
 
     <Button
         android:text="@string/basicNeeds_butt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/basicNeeds_butt"
+        android:height="70dp"
+        android:background="@color/colorBasic"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="45dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:height="70dp"
-        android:background="@android:color/holo_red_light" />
+        android:textSize="17sp" />
+
 </RelativeLayout>

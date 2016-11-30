@@ -6,11 +6,6 @@
     <string name="title_activity_tsunami">TsunamiActivity</string>
     <string name="title_activity_terrorist">TerroristActivity</string>
 
-    <string name="injured_question">Someone is injured</string>
-    <string name="stuck_question">Someone is stuck</string>
-    <string name="urgentHelp_question">Someone needs urgent help</string>
-    <string name="potentialDanger_question">Someone is still in danger</string>
-
     <string name="action_settings">Settings</string>
     <string name="action_map">Map statistics</string>
     <string name="action_tips">Survival tips</string>
@@ -20,15 +15,13 @@
     <string name="suppNeeds_butt">Supporting Needs</string>
     <string name="surroundings_butt">Surroundings state</string>
     <string name="extra_butt">Extra information</string>
+    <string name="textDone_txt">You are done with the questionnaire</string>
 
-    <string name="buildingDestruction_text">Level of building destruction:</string>
-    <string-array name="buildingDestruction_arrays">
-        <item>None</item>
-        <item>Some minor destruction</item>
-        <item>Several affected buildings</item>
-        <item>Most of the buildings</item>
-    </string-array>
-
+    <!-- BASIC........................................................................-->
+    <string name="injured_question">I am seriously injured</string>
+    <string name="stuck_question">I am stuck</string>
+    <string name="urgentHelp_question">Someone needs urgent help</string>
+    <string name="potentialDanger_question">I am still in danger</string>
     <string name="survivalDays_text">I (we) can survive for:</string>
     <string-array name="survivalDays_arrays">
         <item>Less than one</item>
@@ -36,7 +29,34 @@
         <item>3-4 days</item>
         <item>More than 4</item>
     </string-array>
+    <string name="need_txt">I NEED:</string>
+    <string name="needMedicines_txt">Medicines/First aids</string>
+    <string name="needWater_txt">Water</string>
+    <string name="needFood_txt">Food</string>
 
+    <!-- SUPPORTING..................................................................-->
+    <string name="needShelter_txt">Shelter</string>
+    <string name="needElectricity_txt">Electrical power</string>
+    <string name="needHeating_txt">Heating/cooling devices</string>
+    <string name="needHygiene_txt">Hygiene/sanitation products</string>
+    <string name="needTransport_txt">Transport</string>
+    <string name="needProtection_txt">Protection</string>
+    <string name="needCommunication_txt">Communication</string>
+
+    <!-- SURROUNDINGS.................................................................-->
+    <string name="disaster_txt">I have been in a:</string>
+    <string name="tornado_txt">Tornado</string>
+    <string name="hurricane_txt">Hurricane</string>
+    <string name="earthquake_txt">Earthquake</string>
+    <string name="tsunami_txt">Floods/Tsunami</string>
+    <string name="terrorist_txt">Terrorist attack</string>
+    <string name="buildingDestruction_text">Level of building destruction:</string>
+    <string-array name="buildingDestruction_arrays">
+        <item>None</item>
+        <item>Some minor destruction</item>
+        <item>Several affected buildings</item>
+        <item>Most of the buildings</item>
+    </string-array>
     <string name="waterLevel_text">Level of water:</string>
     <string-array name="waterLevel_arrays">
         <item>None</item>
@@ -44,4 +64,12 @@
         <item>3-5 meters</item>
         <item>More than 5</item>
     </string-array>
+    <string name="access_question">It is impossible to access by land to where I am</string>
+
+    <!-- EXTRAS.......................................................................-->
+    <string name="documentation_question">I do not have my documentation</string>
+    <string name="lostFriends_question">I cannot find family/friends</string>
+    <string name="namesFriends_txt">I am looking for:</string>
+    <string name="communicate_txt">I urgently need to communicate (short text!):</string>
+
 </resources>

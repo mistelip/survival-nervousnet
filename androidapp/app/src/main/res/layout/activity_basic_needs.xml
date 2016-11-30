@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_basic_needs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,11 +13,165 @@
 
     <Button
         android:text="Send"
-        android:background="#a1cc7c"
+        android:background="@color/colorBasic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sendButtBasicNeeds"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/injuredCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/injured_question"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/stuckCheckBox"
+        android:text="@string/stuck_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_below="@+id/injuredCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/urgentHelpCheckBox"
+        android:text="@string/urgentHelp_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_below="@+id/stuckCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/dangerCheckBox"
+        android:text="@string/potentialDanger_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_below="@+id/urgentHelpCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:id="@+id/survivalDaysSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:popupBackground="@color/colorAccentWhite"
+        android:entries="@array/survivalDays_arrays"
+        android:prompt="@string/survivalDays_text"
+        android:backgroundTint="@android:color/holo_red_light"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_below="@+id/survivalDaysText"
+        android:layout_alignParentLeft="true"
+        android:textSize="15sp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/needText"
+        android:text="@string/need_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_below="@+id/survivalDaysSpinner"
+        android:layout_alignLeft="@+id/foodCheckBox"
+        android:layout_alignStart="@+id/foodCheckBox"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/survivalDaysText"
+        android:text="@string/survivalDays_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/dangerCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/medicinesCheckBox"
+        android:text="@string/needMedicines_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/foodCheckBox"
+        android:text="@string/needFood_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_below="@+id/medicinesCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/waterCheckBox"
+        android:text="@string/needWater_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:textSize="15sp"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:focusable="false"
+        android:theme="@style/CheckBoxBasic"
+        android:layout_below="@+id/foodCheckBox"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"

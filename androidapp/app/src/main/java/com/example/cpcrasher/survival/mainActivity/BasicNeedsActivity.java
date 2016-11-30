@@ -31,6 +31,6 @@ public class BasicNeedsActivity extends AppCompatActivity {
         // Check if spinners are -1: if notm¡, send value.
         Toast toast = Toast.makeText(getApplicationContext(),"Data has been sent",Toast.LENGTH_SHORT);
         toast.show();
-        ((MyQuiz)this.getApplication()).setQuizDone("basicNeeds");
+        //((MyQuiz)this.getApplication()).setQuizDone("basicNeeds");
     }
 }
