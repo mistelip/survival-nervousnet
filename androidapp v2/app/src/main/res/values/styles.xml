@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+
+        <!-- This is the styling for action bar -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <!--To change the text styling of options menu items</item>-->
+        <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
+        <!--To change the background of options menu-->
+        <item name="android:itemBackground">@color/colorAccent</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/colorAccent</item>
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+    </style>
+
+    <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorTextToolbar</item>
+    </style>
+
+    <style name="MyActionBar.MenuTextStyle" parent="style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorTextToolbar</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+
+</resources>

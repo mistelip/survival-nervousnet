@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.irene.survival_v3.MainActivity">
+    <item
+        android:title="@string/action_quiz"
+        android:orderInCategory="100"
+        android:id="@+id/action_quiz" />
+    <item
+        android:title="@string/action_map"
+        android:orderInCategory="101"
+        android:id="@+id/action_map" />
+    <item
+        android:title="@string/action_tips"
+        android:orderInCategory="102"
+        android:id="@+id/action_tips" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="103"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

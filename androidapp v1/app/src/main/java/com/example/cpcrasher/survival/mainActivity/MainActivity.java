@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 basicNeeds_butt.setAlpha(.6f);
                 basicNeeds_butt.setEnabled(false);
-                basic = true;
+                //basic = true;
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 suppNeeds_butt.setAlpha(.6f);
                 suppNeeds_butt.setEnabled(false);
-                supp = true;
+                //supp = true;
                 startActivity(intent);
 
             }
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 surroundings_butt.setAlpha(.6f);
                 surroundings_butt.setEnabled(false);
-                surr = true;
+                //surr = true;
                 startActivity(intent);
             }
         });
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 extra_butt.setAlpha(.6f);
                 extra_butt.setEnabled(false);
-                extra = true;
+                //extra = true;
                 startActivity(intent);
             }
         });
