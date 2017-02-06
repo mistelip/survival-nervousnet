@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorToolbar">#000000</color> <!-- Toolbar app color -->
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#FF5722</color> <!-- Top app color -->
-    <color name="colorAccent">#ffab91</color> <!-- Buttons selection color -->
+    <color name="colorPrimary">#000000</color> <!-- Text in the App -->
+    <color name="colorPrimaryDark">#FF5722</color> <!-- Nervousnet Orange -->
+    <color name="colorAccent">#FF7246</color> <!-- Top app color (#ffab91)-->
     <color name="colorAccentWhite">#ffffff</color> <!-- Buttons selection color -->
     <color name="colorTextToolbar">#000000</color> <!-- Text Toolbar -->
 
