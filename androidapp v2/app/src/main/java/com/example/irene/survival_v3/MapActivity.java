@@ -1,11 +1,16 @@
 package com.example.irene.survival_v3;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
+import android.preference.PreferenceActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.List;
 
 public class MapActivity extends AppCompatActivity {
 
@@ -24,6 +29,7 @@ public class MapActivity extends AppCompatActivity {
         if (actionBar != null) {
             // Show the Up button in the action bar.
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(R.string.title_activity_map);
         }
     }
 
@@ -38,6 +44,8 @@ public class MapActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
     /*
     @Override

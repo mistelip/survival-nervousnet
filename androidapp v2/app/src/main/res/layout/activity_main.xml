@@ -32,7 +32,15 @@
         android:background="@color/colorAccent"
         android:elevation="0dp"
         style="@style/Widget.AppCompat.Button"
-        android:layout_marginTop="380dp" />
+        android:layout_marginTop="400dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/swipe"
+        android:id="@+id/imageView"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="110dp" />
 
     <TextView
         android:text="@string/quiz_instructions"
@@ -40,12 +48,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_instrcutions"
         android:textSize="30sp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="95dp"
         android:layout_marginLeft="51dp"
         android:layout_marginRight="45dp"
         android:textColor="@color/colorPrimary"
         android:textAlignment="center" />
-
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -8,13 +8,13 @@
 
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_map">Map statistics</string>
-    <string name="title_activity_quiz">Survival tips</string>
-    <string name="title_activity_tips">Quiz</string>
+    <string name="title_activity_quiz">Survival quiz</string>
+    <string name="title_activity_tips">Survival tips</string>
 
 
     <!-- Quiz instructions page-->
     <string name="start_quiz_button">Start quiz</string>
-    <string name="quiz_instructions">Swipe to left to continue with next question or skip it</string>
+    <string name="quiz_instructions">Swipe to continue with next question or skip it</string>
 
     <!-- Quiz strings and themes-->
     <style name="CheckBoxBasic" parent="Widget.AppCompat.CompoundButton.CheckBox">

@@ -26,6 +26,7 @@ public class TipsActivity extends AppCompatActivity {
         if (actionBar != null) {
             // Show the Up button in the action bar.
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(R.string.title_activity_tips);
         }
     }
 

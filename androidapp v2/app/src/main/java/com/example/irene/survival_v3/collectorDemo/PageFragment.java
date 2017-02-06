@@ -28,7 +28,7 @@ public class PageFragment extends Fragment {
         textView = (TextView) view.findViewById(R.id.textView);
         Bundle bundle = getArguments();
         String message = Integer.toString(bundle.getInt("count"));
-        textView.setText("This is the " + message +  " Swipe View page.");
+        textView.setText("Question " + message +  "...");
         return view;
     }
 

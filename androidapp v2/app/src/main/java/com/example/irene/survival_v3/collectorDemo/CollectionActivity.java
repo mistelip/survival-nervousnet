@@ -1,5 +1,6 @@
 package com.example.irene.survival_v3.collectorDemo;
 
+import android.app.ActionBar;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -8,32 +9,24 @@ import android.os.Bundle;
 import com.example.irene.survival_v3.R;
 
 public class CollectionActivity extends FragmentActivity {
-    // When requested, this adapter returns a ObjectFragment,
+    // When requested, this adapter returns a PageFragment,
     // representing an object in the collection.
-    CollectionPagerAdapter mDemoCollectionPagerAdapter;
+    SwipeAdapter swipeAdapter;
     ViewPager mViewPager;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //final ActionBar actionBar = getActionBar();
+        final ActionBar actionBar = getActionBar();
         setContentView(R.layout.activity_collection_demo);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
+        swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(swipeAdapter);
 
 /*
-        // ViewPager and its adapters use support library
-        // fragments, so use getSupportFragmentManager.
-        mDemoCollectionPagerAdapter = new CollectionPagerAdapter(getSupportFragmentManager());
 
-        mViewPager.setAdapter(mDemoCollectionPagerAdapter);
-
-
-        // Specify that tabs should be displayed in the action bar.
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         // Create a tab listener that is called when the user changes tabs.
         ActionBar.TabListener tabListener = new ActionBar.TabListener() {
