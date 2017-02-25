@@ -25,6 +25,8 @@ public class CollectionActivity extends FragmentActivity {
         swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(swipeAdapter);
 
+
+
 /*
 
 

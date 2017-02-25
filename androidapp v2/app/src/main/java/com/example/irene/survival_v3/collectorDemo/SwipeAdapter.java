@@ -19,7 +19,7 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
         Fragment fragment = new PageFragment();
         Bundle args = new Bundle();
-        args.putInt("count", i + 1);
+        args.putInt("count", 1 + i);
         //args.putInt(ObjectFragment.ARG_OBJECT, i + 1);
         fragment.setArguments(args);
         return fragment;
@@ -27,6 +27,11 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 3;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int i) {
+        return "QUESTION " + (i + 1);
     }
 }

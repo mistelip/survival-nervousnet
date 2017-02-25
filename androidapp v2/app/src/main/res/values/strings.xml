@@ -16,7 +16,7 @@
     <string name="start_quiz_button">Start quiz</string>
     <string name="quiz_instructions">Swipe to continue with next question or skip it</string>
 
-    <!-- Quiz strings and themes-->
+    <!-- Quiz themes-->
     <style name="CheckBoxBasic" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="colorControlNormal">@color/colorPrimary</item> <!-- border color -->
         <item name="colorControlActivated">@color/colorBasic</item> <!-- fill color -->
@@ -41,11 +41,82 @@
         <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
     </style>
 
-    <style name="EditTextExtra" parent="Widget.AppCompat.EditText">
-        <item name="colorControlNormal">@color/colorPrimary</item> <!-- border color -->
-        <item name="colorControlActivated">@color/colorExtra</item> <!-- fill color -->
-        <item name="colorControlHighlight">@color/colorAccentWhite</item> <!-- animation color -->
-    </style>
+    <!-- Quiz QUESTIONS -->
+    <!-- BASIC........................................................................-->
+    <string name="quest1">What happened?</string>
+    <string-array name="quest1_arrays">
+        <item>Tornado</item>
+        <item>Hurricane</item>
+        <item>Earthquake</item>
+        <item>Tsunami/Floods</item>
+        <item>Terrorist Attack</item>
+    </string-array>
+
+    <string name="quest2">Are you injured?</string>
+    <string-array name="quest2_arrays">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="quest3">Are you stuck?</string>
+    <string-array name="quest3_arrays">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="injured_question">I am seriously injured</string>
+    <string name="stuck_question">I am stuck</string>
+    <string name="urgentHelp_question">Someone needs urgent help</string>
+    <string name="potentialDanger_question">I am still in danger</string>
+    <string name="survivalDays_text">I (we) can survive for:</string>
+    <string-array name="survivalDays_arrays">
+        <item>Less than one</item>
+        <item>1-2 days</item>
+        <item>3-4 days</item>
+        <item>More than 4</item>
+    </string-array>
+    <string name="need_txt">I NEED:</string>
+    <string name="needMedicines_txt">Medicines/First aids</string>
+    <string name="needWater_txt">Water</string>
+    <string name="needFood_txt">Food</string>
+
+    <!-- SUPPORTING..................................................................-->
+    <string name="needShelter_txt">Shelter</string>
+    <string name="needElectricity_txt">Electrical power</string>
+    <string name="needHeating_txt">Heating/cooling devices</string>
+    <string name="needHygiene_txt">Hygiene/sanitation products</string>
+    <string name="needTransport_txt">Transport</string>
+    <string name="needProtection_txt">Protection</string>
+    <string name="needCommunication_txt">Communication</string>
+
+    <!-- SURROUNDINGS.................................................................-->
+    <string name="disaster_txt">I have been in a:</string>
+    <string name="tornado_txt">Tornado</string>
+    <string name="hurricane_txt">Hurricane</string>
+    <string name="earthquake_txt">Earthquake</string>
+    <string name="tsunami_txt">Floods/Tsunami</string>
+    <string name="terrorist_txt">Terrorist attack</string>
+    <string name="buildingDestruction_text">Level of building destruction:</string>
+    <string-array name="buildingDestruction_arrays">
+        <item>None</item>
+        <item>Some minor destruction</item>
+        <item>Several affected buildings</item>
+        <item>Most of the buildings</item>
+    </string-array>
+    <string name="waterLevel_text">Level of water:</string>
+    <string-array name="waterLevel_arrays">
+        <item>None</item>
+        <item>1-3 meters</item>
+        <item>3-5 meters</item>
+        <item>More than 5</item>
+    </string-array>
+    <string name="access_question">It is impossible to access by land to where I am</string>
+
+    <!-- EXTRAS.......................................................................-->
+    <string name="documentation_question">I do not have my documentation</string>
+    <string name="lostFriends_question">I cannot find family/friends</string>
+    <string name="namesFriends_txt">I am looking for:</string>
+    <string name="communicate_txt">I urgently need to communicate (short text!):</string>
 
 
     <!-- Strings related to Settings -->
