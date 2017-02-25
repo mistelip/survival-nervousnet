@@ -1,11 +1,11 @@
 package com.example.irene.survival_v3.collectorDemo;
 
 
-import com.example.irene.survival_v3.R;
+import android.util.Log;
 
 import java.util.ArrayList;
-
-import static android.provider.Settings.Secure.getString;
+import java.util.Arrays;
+import java.util.HashMap;
 
 
 /**
@@ -14,42 +14,74 @@ import static android.provider.Settings.Secure.getString;
 
 public class QuizController {
 
-    public ArrayList<Question> questionList = new ArrayList<Question>();
+    public HashMap<String, Question> questionMap = new HashMap<String, Question>();
+    private Question currQuestion;
+    //    answerID: -1 = no Answer, -2 = First Question
+    private int answerID;
 
-    public QuizController(){
-        questionList.add(0,getQuestion("1"));
-        questionList.add(1,getQuestion("2"));
-        questionList.add(2,getQuestion("3"));
+    public QuizController() {
+        answerID = -2;
+        loadQuestions();
     }
 
-    public Question getQuestion(String id){
-        Question question = new Question();
-        switch(id) {
-            case "1":
-                question.id = id;
-                question.numOpt = 5;
-                question.title = R.string.quest1;
-                question.options = R.array.quest1_arrays;
-                question.type = "basic";
-                break;
-            case "2":
-                question.id = id;
-                question.numOpt = 2;
-                question.title = R.string.quest2;
-                question.options = R.array.quest2_arrays;
-                question.type = "basic";
-                break;
+    private void loadQuestions() {
+        //TODO: [Patrick] Load questions from json file.
 
-            case "3":
-                question.id = id;
-                question.numOpt = 2;
-                question.title = R.string.quest3;
-                question.options = R.array.quest3_arrays;
-                question.type = "basic";
-                break;
+        ArrayList<String> answers = new ArrayList<String>();
+        answers.addAll(Arrays.asList(new String[]{"Ass", "Meth", "crack"}));
+        ArrayList<String> ids = new ArrayList<String>();
+        ids.addAll(Arrays.asList(new String[]{"mlemle1", "mlemle1", "mlemle2"}));
+        Question q = new Question("What happened?", answers, ids, 1);
+        questionMap.put("FIRST", q);
+
+        ArrayList<String> answers2 = new ArrayList<String>();
+        answers2.addAll(Arrays.asList(new String[]{"Yes", "No"}));
+        ArrayList<String> ids2 = new ArrayList<String>();
+        ids2.addAll(Arrays.asList(new String[]{"mlemle1", "mlemle2"}));
+        Question q2 = new Question("Are you injured", answers2, ids2, 1);
+        questionMap.put("mlemle1", q2);
+
+        ArrayList<String> answers3 = new ArrayList<String>();
+        answers3.addAll(Arrays.asList(new String[]{"Yes", "No"}));
+        ArrayList<String> ids3 = new ArrayList<String>();
+        ids3.addAll(Arrays.asList(new String[]{"mlemle1", "mlemle2"}));
+        Question q3 = new Question("Are you Stuck", answers3, ids3, 1);
+        questionMap.put("mlemle2", q3);
+
+
+    }
+
+    public void setCurrAnswer(int i) {
+        answerID = i;
+    }
+
+    public Question getNextQuestion() {
+        if (answerID == -2) {
+            Log.e("#QuizController", "Loading First Question");
+            return getFirstQuestion();
+        }
+        if (answerID == -1) {
+            Log.e("#QuizController", "No Answer Selected");
+            return currQuestion;
         }
 
+        if (currQuestion == null) {
+            Log.e("#QuizController", "No Current Question");
+            return new Question();
+        }
 
-        return question;
+        String nextQuestionId = currQuestion.nextQuestionIds.get(answerID);
+        currQuestion = questionMap.get(nextQuestionId);
+        answerID = -1;
+        return currQuestion;
+    }
+
+    private Question getFirstQuestion() {
+        currQuestion = questionMap.get("FIRST");
+        if (currQuestion == null) {
+            Log.e("#QuizController", "FIRST Question not set");
+        }
+        answerID = -1;
+        return currQuestion;
     }
 }

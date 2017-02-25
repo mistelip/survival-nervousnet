@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.util.Log;
 
 /**
  * Created by Irene on 06/02/2017.
@@ -11,13 +12,18 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class SwipeAdapter extends FragmentStatePagerAdapter {
 
+    private final QuizController quizController;
+
     public SwipeAdapter(FragmentManager fm) {
         super(fm);
+        Log.d("#SwipeAdapter","Loaded Swipe Adapter");
+        quizController = new QuizController();
     }
 
     @Override
-    public Fragment getItem(int i) {
-        Fragment fragment = new PageFragment();
+    public PageFragment getItem(int i) {
+        PageFragment fragment = new PageFragment();
+        fragment.setQuizController(quizController);
         Bundle args = new Bundle();
         args.putInt("count", 1 + i);
         //args.putInt(ObjectFragment.ARG_OBJECT, i + 1);
@@ -25,9 +31,10 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
         return fragment;
     }
 
+
     @Override
     public int getCount() {
-        return 3;
+        return 20;
     }
 
     @Override

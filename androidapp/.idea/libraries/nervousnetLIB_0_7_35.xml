@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="nervousnetLIB-0.7.35">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/ch.ethz.coss.nervousnet/nervousnetLIB/0.7.35/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/ch.ethz.coss.nervousnet/nervousnetLIB/0.7.35/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.ethz.coss.nervousnet/nervousnetLIB/0.7.35/c0f74f44f8ce7ae7422893cc4926544402abdffb/nervousnetLIB-0.7.35-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

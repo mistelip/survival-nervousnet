@@ -1,0 +1,7 @@
+#Tue Oct 04 22:19:26 CEST 2016
+base.0=C\:\\Users\\patrick\\Documents\\survival-nervousnet\\androidapp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_dfcc7b7087434eb54ca31b3aac57ea57f945cf51
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\patrick\\Documents\\survival-nervousnet\\androidapp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_48b08db223ff5db51497124f7db8cf4bf05d6450\\classes.dex
+base.1=C\:\\Users\\patrick\\Documents\\survival-nervousnet\\androidapp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_48b08db223ff5db51497124f7db8cf4bf05d6450
+file.0=C\:\\Users\\patrick\\Documents\\survival-nervousnet\\androidapp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_dfcc7b7087434eb54ca31b3aac57ea57f945cf51\\classes.dex
