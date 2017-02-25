@@ -19,7 +19,7 @@ public class PageFragment extends Fragment {
     TextView titleQuest;
     public QuizController quiz = new QuizController();
 
-    public PageFragment () {
+    public PageFragment() {
     }
 
 
@@ -30,15 +30,15 @@ public class PageFragment extends Fragment {
         Bundle bundle = getArguments();
         // Question title
         int id = bundle.getInt("count");
-        String title = getString(quiz.questionList.get(id-1).title);
+        String title = getString(quiz.questionList.get(id - 1).title);
         titleQuest.setText(title);
 
         // Question options
         Resources res = getResources();
-        String[] opt = res.getStringArray(quiz.questionList.get(id-1).options);
+        String[] opt = res.getStringArray(quiz.questionList.get(id - 1).options);
         for (int i = 0; i < 5; i++) {
             CheckBox box;
-            if(i<quiz.questionList.get(id - 1).numOpt) {
+            if (i < quiz.questionList.get(id - 1).numOpt) {
                 switch (i) {
                     case 0:
                         box = (CheckBox) view.findViewById(R.id.checkBox1);
@@ -68,7 +68,7 @@ public class PageFragment extends Fragment {
                         box.setText(opt[4]);
                         break;
                 }
-            }else{
+            } else {
                 switch (i) {
                     case 0:
                         box = (CheckBox) view.findViewById(R.id.checkBox1);
@@ -96,8 +96,6 @@ public class PageFragment extends Fragment {
         }
         return view;
     }
-
-
 
 
 }
