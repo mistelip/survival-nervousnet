@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 
 
 import com.example.irene.survival_v3.R;
@@ -12,7 +13,10 @@ public class CollectionActivity extends FragmentActivity {
     // When requested, this adapter returns a PageFragment,
     // representing an object in the collection.
     SwipeAdapter swipeAdapter;
-    ViewPager mViewPager;
+    CustomViewPager mViewPager;
+    private final QuizController quizController =  new QuizController();
+
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +25,18 @@ public class CollectionActivity extends FragmentActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
+        Log.d("#ColectionActivity","Loaded quiz");
+        mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
+        swipeAdapter = new SwipeAdapter(getSupportFragmentManager(), quizController, mViewPager);
         mViewPager.setAdapter(swipeAdapter);
+
+        mViewPager.setPagingEnabled(false);
+
+
+
+
+
+
 
 
 

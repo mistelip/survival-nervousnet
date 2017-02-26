@@ -11,34 +11,37 @@ import android.util.Log;
  */
 
 public class SwipeAdapter extends FragmentStatePagerAdapter {
-
     private final QuizController quizController;
+    private CustomViewPager viewPager;
 
-    public SwipeAdapter(FragmentManager fm) {
+    public SwipeAdapter(FragmentManager fm, QuizController quiz, CustomViewPager pager) {
         super(fm);
+        this.quizController = quiz;
+        this.viewPager = pager;
         Log.d("#SwipeAdapter","Loaded Swipe Adapter");
-        quizController = new QuizController();
     }
 
     @Override
     public PageFragment getItem(int i) {
+        Log.d("#SwipeAdapter","next Fragment");
         PageFragment fragment = new PageFragment();
         fragment.setQuizController(quizController);
-        Bundle args = new Bundle();
-        args.putInt("count", 1 + i);
+        fragment.setViewPager(viewPager);
+        //Bundle args = new Bundle();
+        //args.putInt("count",i);
         //args.putInt(ObjectFragment.ARG_OBJECT, i + 1);
-        fragment.setArguments(args);
+        //fragment.setArguments(args);
         return fragment;
     }
 
 
     @Override
     public int getCount() {
-        return 20;
+        return 10;
     }
 
     @Override
     public CharSequence getPageTitle(int i) {
-        return "QUESTION " + (i + 1);
+        return "QUESTION " + (i+1) ;
     }
 }

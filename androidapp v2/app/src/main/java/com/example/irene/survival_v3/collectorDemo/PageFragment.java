@@ -18,100 +18,124 @@ import java.util.ArrayList;
 
 public class PageFragment extends Fragment {
     TextView titleQuest;
+    private int currAnswer;
     public QuizController quizController;
+    private CustomViewPager viewPager;
 
     public PageFragment() {
 
     }
 
     public void setQuizController(QuizController qc) {
+
         quizController = qc;
     }
+    public void setViewPager(CustomViewPager vp) {
+        viewPager = vp;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
         titleQuest = (TextView) view.findViewById(R.id.titleQuest_text);
-        Bundle bundle = getArguments();
+        viewPager.setPagingEnabled(false);
+        //Bundle bundle = getArguments();
 
         // Question title
-        Question currQuestion = quizController.getNextQuestion();
+        final Question currQuestion = quizController.getNextQuestion();
         titleQuest.setText(currQuestion.mainQuestion);
 
         if (currQuestion.mainQuestion == null) {
             return view;
         }
+
         // Question options
-        Resources res = getResources();
+        //Resources res = getResources();
 //        String[] opt = res.getStringArray(quizController.questionMap.get("FIRST").answers);
         ArrayList<String> opt = currQuestion.answers;
-        for (int i = 0; i < 5; i++) {
-            CheckBox box;
-            if (i < opt.size()) {
+        final int numAns = opt.size();
+        final ArrayList<CheckBox> answers = new ArrayList<CheckBox>();
+
+
+        for (int i = 0; i < quizController.MAX_NUM_ANSWERS; i++) {
+
+            if (i < numAns) {
                 switch (i) {
                     case 0:
-                        box = (CheckBox) view.findViewById(R.id.checkBox1);
-                        box.setText(opt.get(i));
-                        box.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Log.d("#PageFragment","Set CurrAnswer 0");
-                                quizController.setCurrAnswer(0);
-                            }
-
-                        });
+                        CheckBox box1 = (CheckBox) view.findViewById(R.id.checkBox1);
+                        box1.setText(opt.get(i));
+                        answers.add(box1);
                         break;
                     case 1:
-                        box = (CheckBox) view.findViewById(R.id.checkBox2);
-                        box.setText(opt.get(i));
-                        box.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Log.d("#PageFragment","Set CurrAnswer 1");
-                                quizController.setCurrAnswer(1);
-                            }
-
-                        });
+                        CheckBox box2 = (CheckBox) view.findViewById(R.id.checkBox2);
+                        box2.setText(opt.get(i));
+                        answers.add(box2);
                         break;
                     case 2:
-                        box = (CheckBox) view.findViewById(R.id.checkBox3);
-                        box.setText(opt.get(i));
+                        CheckBox box3 = (CheckBox) view.findViewById(R.id.checkBox3);
+                        box3.setText(opt.get(i));
+                        answers.add(box3);
                         break;
                     case 3:
-                        box = (CheckBox) view.findViewById(R.id.checkBox4);
-                        box.setText(opt.get(i));
+                        CheckBox box4 = (CheckBox) view.findViewById(R.id.checkBox4);
+                        box4.setText(opt.get(i));
+                        answers.add(box4);
                         break;
                     case 4:
-                        box = (CheckBox) view.findViewById(R.id.checkBox5);
-                        box.setText(opt.get(i));
+                        CheckBox box5 = (CheckBox) view.findViewById(R.id.checkBox5);
+                        box5.setText(opt.get(i));
+                        answers.add(box5);
                         break;
                 }
             } else {
                 switch (i) {
                     case 0:
-                        box = (CheckBox) view.findViewById(R.id.checkBox1);
-                        box.setVisibility(CheckBox.INVISIBLE);
+                        CheckBox box1 = (CheckBox) view.findViewById(R.id.checkBox1);
+                        box1.setVisibility(CheckBox.INVISIBLE);
                         break;
                     case 1:
-                        box = (CheckBox) view.findViewById(R.id.checkBox2);
-                        box.setVisibility(CheckBox.INVISIBLE);
+                        CheckBox box2 = (CheckBox) view.findViewById(R.id.checkBox2);
+                        box2.setVisibility(CheckBox.INVISIBLE);
                         break;
                     case 2:
-                        box = (CheckBox) view.findViewById(R.id.checkBox3);
-                        box.setVisibility(CheckBox.INVISIBLE);
+                        CheckBox box3 = (CheckBox) view.findViewById(R.id.checkBox3);
+                        box3.setVisibility(CheckBox.INVISIBLE);
                         break;
                     case 3:
-                        box = (CheckBox) view.findViewById(R.id.checkBox4);
-                        box.setVisibility(CheckBox.INVISIBLE);
+                        CheckBox box4 = (CheckBox) view.findViewById(R.id.checkBox4);
+                        box4.setVisibility(CheckBox.INVISIBLE);
                         break;
                     case 4:
-                        box = (CheckBox) view.findViewById(R.id.checkBox5);
-                        box.setVisibility(CheckBox.INVISIBLE);
+                        CheckBox box5 = (CheckBox) view.findViewById(R.id.checkBox5);
+                        box5.setVisibility(CheckBox.INVISIBLE);
                         break;
                 }
             }
 
         }
+
+        for (int i = 0; i < numAns; i++) {
+            final int id = i;
+            CheckBox box = answers.get(i);
+            box.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d("#PageFragment","Set CurrAnswer "+id);
+                    currAnswer = id;
+                    quizController.setCurrAnswer(currAnswer);
+
+                    for (int i = 0; i < numAns; i++) {
+                        if(i != id && answers.get(i).isChecked()){
+                            answers.get(i).toggle();
+                        }
+                    }
+                    viewPager.setPagingEnabled(true);
+                }
+
+            });
+        }
+
         return view;
     }
 
