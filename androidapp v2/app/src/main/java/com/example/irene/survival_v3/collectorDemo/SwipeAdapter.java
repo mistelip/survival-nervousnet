@@ -13,11 +13,13 @@ import android.util.Log;
 public class SwipeAdapter extends FragmentStatePagerAdapter {
     private final QuizController quizController;
     private CustomViewPager viewPager;
+    private int numMaxPages;
 
     public SwipeAdapter(FragmentManager fm, QuizController quiz, CustomViewPager pager) {
         super(fm);
         this.quizController = quiz;
         this.viewPager = pager;
+        this.numMaxPages = quizController.MAX_NUM_QUEST;
         Log.d("#SwipeAdapter","Loaded Swipe Adapter");
     }
 
@@ -27,17 +29,13 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
         PageFragment fragment = new PageFragment();
         fragment.setQuizController(quizController);
         fragment.setViewPager(viewPager);
-        //Bundle args = new Bundle();
-        //args.putInt("count",i);
-        //args.putInt(ObjectFragment.ARG_OBJECT, i + 1);
-        //fragment.setArguments(args);
         return fragment;
     }
 
 
     @Override
     public int getCount() {
-        return 10;
+        return numMaxPages;
     }
 
     @Override

@@ -15,6 +15,7 @@ import java.util.HashMap;
 public class QuizController {
 
     public int MAX_NUM_ANSWERS = 5;
+    public int MAX_NUM_QUEST = 4;
     public HashMap<String, Question> questionMap = new HashMap<String, Question>();
     public Question currQuestion;
     //    answerID: -1 = no Answer, -2 = First Question
@@ -27,6 +28,7 @@ public class QuizController {
 
     private void loadQuestions() {
         //TODO: [Patrick] Load questions from json file.
+        //TODO: [Patrick] Srt max num of questions as a parameter (not static) taken from json
 
         ArrayList<String> answers = new ArrayList<String>();
         answers.addAll(Arrays.asList(new String[]{"2", "3", "4"}));

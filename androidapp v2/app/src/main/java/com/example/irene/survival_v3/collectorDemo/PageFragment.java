@@ -17,19 +17,17 @@ import java.util.ArrayList;
 
 
 public class PageFragment extends Fragment {
-    TextView titleQuest;
-    private int currAnswer;
+    private int currAnswer = -1;
     public QuizController quizController;
     private CustomViewPager viewPager;
 
-    public PageFragment() {
-
-    }
+    public PageFragment() {}
 
     public void setQuizController(QuizController qc) {
-
         quizController = qc;
     }
+
+
     public void setViewPager(CustomViewPager vp) {
         viewPager = vp;
     }
@@ -38,12 +36,13 @@ public class PageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
-        titleQuest = (TextView) view.findViewById(R.id.titleQuest_text);
-        viewPager.setPagingEnabled(false);
-        //Bundle bundle = getArguments();
 
-        // Question title
+        if(currAnswer == -1) {
+            viewPager.setPagingEnabled(false);
+        }
         final Question currQuestion = quizController.getNextQuestion();
+        // Question title
+        TextView titleQuest = (TextView) view.findViewById(R.id.titleQuest_text);
         titleQuest.setText(currQuestion.mainQuestion);
 
         if (currQuestion.mainQuestion == null) {
@@ -56,7 +55,6 @@ public class PageFragment extends Fragment {
         ArrayList<String> opt = currQuestion.answers;
         final int numAns = opt.size();
         final ArrayList<CheckBox> answers = new ArrayList<CheckBox>();
-
 
         for (int i = 0; i < quizController.MAX_NUM_ANSWERS; i++) {
 
@@ -136,7 +134,9 @@ public class PageFragment extends Fragment {
             });
         }
 
+
         return view;
+
     }
 
 

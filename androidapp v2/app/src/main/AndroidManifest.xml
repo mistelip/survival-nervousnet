@@ -23,7 +23,7 @@
             android:label="@string/title_activity_settings" />
         <activity android:name=".TipsActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".collectorDemo.CollectionActivity"></activity>
+        <activity android:name=".collectorDemo.QuizActivity"></activity>
     </application>
 
 </manifest>
