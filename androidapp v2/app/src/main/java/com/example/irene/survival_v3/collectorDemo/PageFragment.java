@@ -37,10 +37,11 @@ public class PageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
 
-        if(currAnswer == -1) {
-            viewPager.setPagingEnabled(false);
-        }
         final Question currQuestion = quizController.getNextQuestion();
+        /*(currAnswer == -1 && !quizController.isFirstQuestion(currQuestion)) {
+            viewPager.setPagingEnabled(false);
+        }*/
+
         // Question title
         TextView titleQuest = (TextView) view.findViewById(R.id.titleQuest_text);
         titleQuest.setText(currQuestion.mainQuestion);
@@ -133,6 +134,8 @@ public class PageFragment extends Fragment {
 
             });
         }
+
+        //quizController.isLastQuestion(currQuestion);
 
 
         return view;

@@ -3,6 +3,7 @@ package com.example.irene.survival_v3.collectorDemo;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
@@ -23,14 +24,25 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
         this.viewPager = pager;
         mContext = context;
         this.numMaxPages = quizController.MAX_NUM_QUEST;
-        Log.d("#SwipeAdapter", "Loaded Swipe Adapter");
     }
 
 
     @Override
-    public PageFragment getItem(int position) {
+    public Fragment getItem(int position) {
+        /*
+        if(position == 0){
+            Log.d("#SwipeAdapter", "FIRST Fragment");
+            PageFragment0 fragment = new PageFragment0();
+            fragment.setViewPager(viewPager);
+            return fragment;
+        }else {
+            Log.d("#SwipeAdapter", "next Fragment");
+            PageFragment fragment = new PageFragment();
+            fragment.setQuizController(quizController);
+            fragment.setViewPager(viewPager);
+            return fragment;
+        }*/
         Log.d("#SwipeAdapter", "next Fragment");
-        // TODO: add multiple possible pageFragment views (in case of not checkbox)
         PageFragment fragment = new PageFragment();
         fragment.setQuizController(quizController);
         fragment.setViewPager(viewPager);

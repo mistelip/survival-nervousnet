@@ -34,7 +34,7 @@ public class QuizActivity extends FragmentActivity {
         //swipeAdapter = new SwipeAdapter(getSupportFragmentManager(), quizController, mViewPager);
         //mViewPager.setAdapter(swipeAdapter);
 
-        mViewPager.setPagingEnabled(false);
+        mViewPager.setPagingEnabled(true);
 
     }
 
