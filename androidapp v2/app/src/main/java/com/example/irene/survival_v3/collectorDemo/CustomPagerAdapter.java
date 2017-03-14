@@ -15,7 +15,6 @@ import android.util.Log;
 public class CustomPagerAdapter extends FragmentPagerAdapter {
     private final QuizController quizController;
     protected Context mContext;
-    private int numMaxPages;
     private CustomViewPager viewPager;
 
     public CustomPagerAdapter(FragmentManager fm, QuizController quizController, CustomViewPager pager, Context context) {
@@ -23,13 +22,13 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
         this.quizController = quizController;
         this.viewPager = pager;
         mContext = context;
-        this.numMaxPages = quizController.MAX_NUM_QUEST;
+
     }
 
 
     @Override
     public Fragment getItem(int position) {
-        /*
+
         if(position == 0){
             Log.d("#SwipeAdapter", "FIRST Fragment");
             PageFragment0 fragment = new PageFragment0();
@@ -41,18 +40,21 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
             fragment.setQuizController(quizController);
             fragment.setViewPager(viewPager);
             return fragment;
-        }*/
-        Log.d("#SwipeAdapter", "next Fragment");
+        }
+
+        /*Log.d("#SwipeAdapter", "next Fragment loaded");
         PageFragment fragment = new PageFragment();
         fragment.setQuizController(quizController);
         fragment.setViewPager(viewPager);
-        return fragment;
+        return fragment;*/
     }
 
 
     @Override
     public int getCount() {
-        return numMaxPages;
+
+        //Log.d("#SwipeAdapter", "Num QUEST: " + quizController.MAX_NUM_QUEST);
+        return quizController.MAX_NUM_QUEST;
     }
 
     @Override

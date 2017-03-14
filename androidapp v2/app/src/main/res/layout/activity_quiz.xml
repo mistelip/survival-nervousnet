@@ -21,12 +21,13 @@
 
     </android.support.design.widget.AppBarLayout>
 
+
     <com.example.irene.survival_v3.collectorDemo.CustomViewPager
         android:id="@+id/myViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.PagerTitleStrip
+        <!--<android.support.v4.view.PagerTitleStrip
             android:id="@+id/pager_title_strip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
             android:textColor="@color/colorPrimary"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
-            android:layout_gravity="bottom" />
+            android:layout_gravity="bottom" />-->
 
     </com.example.irene.survival_v3.collectorDemo.CustomViewPager>
 

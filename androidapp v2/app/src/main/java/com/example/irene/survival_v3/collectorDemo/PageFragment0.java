@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.irene.survival_v3.R;
@@ -32,6 +33,8 @@ public class PageFragment0 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment0_page, container, false);
         viewPager.setPagingEnabled(true);
+        ImageView swipeImg = (ImageView) view.findViewById(R.id.imageSwipe);
+        swipeImg.setImageResource(R.drawable.swipe);
         return view;
     }
 }
