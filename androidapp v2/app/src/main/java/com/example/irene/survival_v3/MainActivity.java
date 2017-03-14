@@ -2,16 +2,27 @@ package com.example.irene.survival_v3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.example.irene.survival_v3.collectorDemo.CustomFragmentInterface;
+import com.example.irene.survival_v3.collectorDemo.CustomPagerAdapter;
+import com.example.irene.survival_v3.collectorDemo.CustomViewPager;
 import com.example.irene.survival_v3.collectorDemo.QuizActivity;
+import com.example.irene.survival_v3.collectorDemo.QuizController;
 
 public class MainActivity extends AppCompatActivity {
+
+    //SwipeAdapter swipeAdapter;
+    CustomPagerAdapter mCustomPagerAdapter;
+    CustomViewPager mViewPager;
+    private final QuizController quizController =  new QuizController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +31,39 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Log.d("#MainActivity","Loaded quiz activity");
+        mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
+        mCustomPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager(), quizController, mViewPager, this);
+        mViewPager.setAdapter(mCustomPagerAdapter);
+
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                CustomFragmentInterface fragment = (CustomFragmentInterface) mCustomPagerAdapter.instantiateItem(mViewPager, position);
+                if (fragment != null) {
+                    fragment.fragmentBecameVisible();
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        //mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
+        //swipeAdapter = new SwipeAdapter(getSupportFragmentManager(), quizController, mViewPager);
+        //mViewPager.setAdapter(swipeAdapter);
+
+        mViewPager.setPagingEnabled(true);
+
         // Swipe demo
+        /*
         final Button basicNeeds_butt = (Button) findViewById(R.id.swipeViewButton);
         basicNeeds_butt.setOnClickListener(new View.OnClickListener() {
             //earthquake_txt.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
+
+
 
     }
 
