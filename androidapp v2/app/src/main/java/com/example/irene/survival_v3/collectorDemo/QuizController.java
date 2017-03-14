@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class QuizController {
 
     public int MAX_NUM_ANSWERS = 5;
-    public int MAX_NUM_QUEST = 6;
+    public int MAX_NUM_QUEST = 10;
     public HashMap<String, Question> questionMap = new HashMap<String, Question>();
     public Question currQuestion;
     //    answerID: -1 = no Answer, -2 = First Question
