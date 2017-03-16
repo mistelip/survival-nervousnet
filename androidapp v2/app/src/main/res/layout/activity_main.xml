@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.example.irene.survival_v3.collectorDemo.CustomViewPager
+    <com.example.irene.survival_v3.collectorDemo.QuizViewPager
         android:id="@+id/myViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -36,7 +36,7 @@
             android:paddingBottom="4dp"
             android:layout_gravity="bottom" />-->
 
-    </com.example.irene.survival_v3.collectorDemo.CustomViewPager>
+    </com.example.irene.survival_v3.collectorDemo.QuizViewPager>
 
     <!--<Button
         android:text="@string/start_quiz_button"

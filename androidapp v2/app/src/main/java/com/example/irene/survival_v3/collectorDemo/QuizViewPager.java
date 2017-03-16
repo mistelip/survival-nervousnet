@@ -9,10 +9,10 @@ import android.view.MotionEvent;
  * Created by Irene on 26/02/2017.
  */
 
-public class CustomViewPager extends ViewPager {
+public class QuizViewPager extends ViewPager {
     private boolean enabled;
 
-    public CustomViewPager(Context context, AttributeSet attrs) {
+    public QuizViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.enabled = true;
     }

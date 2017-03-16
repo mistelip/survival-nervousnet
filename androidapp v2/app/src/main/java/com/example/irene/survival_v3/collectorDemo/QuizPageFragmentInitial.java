@@ -2,30 +2,25 @@ package com.example.irene.survival_v3.collectorDemo;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.irene.survival_v3.R;
-
-import java.util.ArrayList;
 
 /**
  * Created by Irene on 07/03/2017.
  */
 
-public class PageFragment0 extends Fragment implements CustomFragmentInterface {
+public class QuizPageFragmentInitial extends Fragment implements QuizFragmentInterface {
 
-    private CustomViewPager viewPager;
+    private QuizViewPager viewPager;
     private View myView;
 
-    public PageFragment0() {}
+    public QuizPageFragmentInitial() {}
 
-    public void setViewPager(CustomViewPager vp) {
+    public void setViewPager(QuizViewPager vp) {
         viewPager = vp;
     }
 

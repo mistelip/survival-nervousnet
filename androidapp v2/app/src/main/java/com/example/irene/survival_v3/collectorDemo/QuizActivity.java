@@ -9,12 +9,12 @@ import android.util.Log;
 import com.example.irene.survival_v3.R;
 
 public class QuizActivity extends FragmentActivity {
-    // When requested, this adapter returns a PageFragment,
+    // When requested, this adapter returns a QuizPageFragment,
     // representing an object in the collection.
 
     //SwipeAdapter swipeAdapter;
-    CustomPagerAdapter mCustomPagerAdapter;
-    CustomViewPager mViewPager;
+    QuizPagerAdapter mCustomPagerAdapter;
+    QuizViewPager mViewPager;
     private final QuizController quizController =  new QuizController();
 
     @Override
@@ -27,8 +27,8 @@ public class QuizActivity extends FragmentActivity {
         //setSupportActionBar(toolbar);
 
         Log.d("#ColectionActivity","Loaded quiz activity");
-        mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
-        mCustomPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager(), quizController, mViewPager, this);
+        mViewPager = (QuizViewPager) findViewById(R.id.myViewPager);
+        mCustomPagerAdapter = new QuizPagerAdapter(getSupportFragmentManager(), quizController, mViewPager, this);
         mViewPager.setAdapter(mCustomPagerAdapter);
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -39,7 +39,7 @@ public class QuizActivity extends FragmentActivity {
 
             @Override
             public void onPageSelected(int position) {
-                CustomFragmentInterface fragment = (CustomFragmentInterface) mCustomPagerAdapter.instantiateItem(mViewPager, position);
+                QuizFragmentInterface fragment = (QuizFragmentInterface) mCustomPagerAdapter.instantiateItem(mViewPager, position);
                 if (fragment != null) {
                     fragment.fragmentBecameVisible();
                 }

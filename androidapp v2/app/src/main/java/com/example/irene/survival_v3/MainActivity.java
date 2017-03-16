@@ -6,22 +6,19 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 
-import com.example.irene.survival_v3.collectorDemo.CustomFragmentInterface;
-import com.example.irene.survival_v3.collectorDemo.CustomPagerAdapter;
-import com.example.irene.survival_v3.collectorDemo.CustomViewPager;
-import com.example.irene.survival_v3.collectorDemo.QuizActivity;
+import com.example.irene.survival_v3.collectorDemo.QuizFragmentInterface;
+import com.example.irene.survival_v3.collectorDemo.QuizPagerAdapter;
+import com.example.irene.survival_v3.collectorDemo.QuizViewPager;
 import com.example.irene.survival_v3.collectorDemo.QuizController;
 
 public class MainActivity extends AppCompatActivity {
 
     //SwipeAdapter swipeAdapter;
-    CustomPagerAdapter mCustomPagerAdapter;
-    CustomViewPager mViewPager;
+    QuizPagerAdapter mCustomPagerAdapter;
+    QuizViewPager mViewPager;
     private final QuizController quizController =  new QuizController();
 
     @Override
@@ -32,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Log.d("#MainActivity","Loaded quiz activity");
-        mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
-        mCustomPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager(), quizController, mViewPager, this);
+        mViewPager = (QuizViewPager) findViewById(R.id.myViewPager);
+        mCustomPagerAdapter = new QuizPagerAdapter(getSupportFragmentManager(), quizController, mViewPager, this);
         mViewPager.setAdapter(mCustomPagerAdapter);
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                CustomFragmentInterface fragment = (CustomFragmentInterface) mCustomPagerAdapter.instantiateItem(mViewPager, position);
+                QuizFragmentInterface fragment = (QuizFragmentInterface) mCustomPagerAdapter.instantiateItem(mViewPager, position);
                 if (fragment != null) {
                     fragment.fragmentBecameVisible();
                 }

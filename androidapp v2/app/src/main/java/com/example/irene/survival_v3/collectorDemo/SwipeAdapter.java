@@ -1,7 +1,5 @@
 package com.example.irene.survival_v3.collectorDemo;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
@@ -12,10 +10,10 @@ import android.util.Log;
 
 public class SwipeAdapter extends FragmentStatePagerAdapter {
     private final QuizController quizController;
-    private CustomViewPager viewPager;
+    private QuizViewPager viewPager;
     private int numMaxPages;
 
-    public SwipeAdapter(FragmentManager fm, QuizController quiz, CustomViewPager pager) {
+    public SwipeAdapter(FragmentManager fm, QuizController quiz, QuizViewPager pager) {
         super(fm);
         this.quizController = quiz;
         this.viewPager = pager;
@@ -24,9 +22,9 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
-    public PageFragment getItem(int i) {
+    public QuizPageFragment getItem(int i) {
         Log.d("#SwipeAdapter","next Fragment");
-        PageFragment fragment = new PageFragment();
+        QuizPageFragment fragment = new QuizPageFragment();
         fragment.setQuizController(quizController);
         fragment.setViewPager(viewPager);
         return fragment;

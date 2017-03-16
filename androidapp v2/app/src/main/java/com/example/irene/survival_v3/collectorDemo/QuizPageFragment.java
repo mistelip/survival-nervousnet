@@ -1,6 +1,5 @@
 package com.example.irene.survival_v3.collectorDemo;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -9,29 +8,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.irene.survival_v3.R;
 
 import java.util.ArrayList;
 
 
-public class PageFragment extends Fragment implements CustomFragmentInterface {
+public class QuizPageFragment extends Fragment implements QuizFragmentInterface {
     private int currAnswer = -1;
     public QuizController quizController;
-    private CustomViewPager viewPager;
+    private QuizViewPager viewPager;
     private View myView;
     private Question myQuestion;
     private boolean newFragment = true;
 
-    public PageFragment() {}
+    public QuizPageFragment() {}
 
     public void setQuizController(QuizController qc) {
         quizController = qc;
     }
 
 
-    public void setViewPager(CustomViewPager vp) {
+    public void setViewPager(QuizViewPager vp) {
         viewPager = vp;
     }
 
@@ -133,7 +131,7 @@ public class PageFragment extends Fragment implements CustomFragmentInterface {
             box.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Log.d("#PageFragment","Set CurrAnswer "+id);
+                    Log.d("#QuizPageFragment","Set CurrAnswer "+id);
                     currAnswer = id;
                     quizController.setCurrAnswer(currAnswer);
 
