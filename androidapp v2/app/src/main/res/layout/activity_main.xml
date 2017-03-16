@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.irene.survival_v3.MainActivity">
+    tools:context="com.example.irene.survival_v3.quizActivities.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.example.irene.survival_v3.collectorDemo.QuizViewPager
+    <com.example.irene.survival_v3.quizActivities.QuizViewPager
         android:id="@+id/myViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -36,7 +36,7 @@
             android:paddingBottom="4dp"
             android:layout_gravity="bottom" />-->
 
-    </com.example.irene.survival_v3.collectorDemo.QuizViewPager>
+    </com.example.irene.survival_v3.quizActivities.QuizViewPager>
 
     <!--<Button
         android:text="@string/start_quiz_button"

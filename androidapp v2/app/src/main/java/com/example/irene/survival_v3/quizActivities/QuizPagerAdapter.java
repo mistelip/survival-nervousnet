@@ -1,17 +1,17 @@
-package com.example.irene.survival_v3.collectorDemo;
+package com.example.irene.survival_v3.quizActivities;
 
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 
 /**
  * Created by Irene on 06/02/2017.
  */
 
-public class QuizPagerAdapter extends FragmentPagerAdapter {
+public class QuizPagerAdapter extends FragmentStatePagerAdapter {
     private final QuizController quizController;
     protected Context mContext;
     private QuizViewPager viewPager;

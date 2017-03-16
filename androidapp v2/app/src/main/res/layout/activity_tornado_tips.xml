@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.example.irene.survival_v3.tipsActivities.TornadoTipsActivity">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tipsViewPager"
+        android:layout_width="381dp"
+        android:layout_height="517dp"
+        tools:layout_editor_absoluteX="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-22dp">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_gravity="bottom" />
+
+    </android.support.v4.view.ViewPager>
+
 </android.support.constraint.ConstraintLayout>

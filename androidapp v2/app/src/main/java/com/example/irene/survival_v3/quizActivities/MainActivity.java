@@ -1,4 +1,4 @@
-package com.example.irene.survival_v3;
+package com.example.irene.survival_v3.quizActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.irene.survival_v3.collectorDemo.QuizFragmentInterface;
-import com.example.irene.survival_v3.collectorDemo.QuizPagerAdapter;
-import com.example.irene.survival_v3.collectorDemo.QuizViewPager;
-import com.example.irene.survival_v3.collectorDemo.QuizController;
+import com.example.irene.survival_v3.MapActivity;
+import com.example.irene.survival_v3.R;
+import com.example.irene.survival_v3.SettingsActivity;
+import com.example.irene.survival_v3.tipsActivities.TipsActivity;
 
 public class MainActivity extends AppCompatActivity {
 

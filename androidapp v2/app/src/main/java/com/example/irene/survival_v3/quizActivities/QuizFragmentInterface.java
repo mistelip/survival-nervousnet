@@ -1,4 +1,4 @@
-package com.example.irene.survival_v3.collectorDemo;
+package com.example.irene.survival_v3.quizActivities;
 
 /**
  * Created by Irene on 14/03/2017.

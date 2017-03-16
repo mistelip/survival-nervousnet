@@ -1,4 +1,4 @@
-package com.example.irene.survival_v3.collectorDemo;
+package com.example.irene.survival_v3.quizActivities;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

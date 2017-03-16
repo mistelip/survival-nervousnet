@@ -1,4 +1,4 @@
-package com.example.irene.survival_v3.collectorDemo;
+package com.example.irene.survival_v3.quizActivities;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
