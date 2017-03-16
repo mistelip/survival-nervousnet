@@ -36,10 +36,17 @@ public class PageFragment extends Fragment implements CustomFragmentInterface {
     }
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View myView = inflater.inflate(R.layout.fragment_page, container, false);
+        this.myView = myView;
+
+        return myView;
+    }
+
+    @Override
     public void fragmentBecameVisible() {
         // You can do your animation here because we are visible! (make sure onViewCreated has been called too and the Layout has been laid. Source for another question but you get the idea.
         Log.d("#PafeFragment", "Fragment visible");
-
 
         if(newFragment){
             myQuestion =  quizController.getNextQuestion();
@@ -143,15 +150,6 @@ public class PageFragment extends Fragment implements CustomFragmentInterface {
 
         //quizController.isLastQuestion(currQuestion);
 
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View myView = inflater.inflate(R.layout.fragment_page, container, false);
-        this.myView = myView;
-
-        return myView;
     }
 
 

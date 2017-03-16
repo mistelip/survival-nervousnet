@@ -18,9 +18,10 @@ import java.util.ArrayList;
  * Created by Irene on 07/03/2017.
  */
 
-public class PageFragment0 extends Fragment {
+public class PageFragment0 extends Fragment implements CustomFragmentInterface {
 
     private CustomViewPager viewPager;
+    private View myView;
 
     public PageFragment0() {}
 
@@ -32,9 +33,14 @@ public class PageFragment0 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment0_page, container, false);
-        viewPager.setPagingEnabled(true);
-        ImageView swipeImg = (ImageView) view.findViewById(R.id.imageSwipe);
-        swipeImg.setImageResource(R.drawable.swipe);
+        myView = view;
         return view;
+    }
+
+    @Override
+    public void fragmentBecameVisible() {
+        viewPager.setPagingEnabled(true);
+        ImageView swipeImg = (ImageView) myView.findViewById(R.id.imageSwipe);
+        swipeImg.setImageResource(R.drawable.swipe);
     }
 }
