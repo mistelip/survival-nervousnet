@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.irene.survival_v3.tipsActivities.TornadoTipsActivity">
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorSoftButt"
+
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/tipsViewPager"
-        android:layout_width="381dp"
-        android:layout_height="517dp"
-        tools:layout_editor_absoluteX="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="-22dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
 
-        <android.support.v4.view.PagerTitleStrip
-            android:id="@+id/pager_title_strip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:textColor="@color/colorPrimary"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:layout_gravity="bottom" />
 
-    </android.support.v4.view.ViewPager>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

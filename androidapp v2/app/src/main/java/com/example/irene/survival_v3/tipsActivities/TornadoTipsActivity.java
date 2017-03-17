@@ -4,6 +4,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.example.irene.survival_v3.R;
 
 
@@ -20,5 +21,10 @@ public class TornadoTipsActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.tipsViewPager);
         mPagerAdapter = new TipsPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+
+
+        PagerSlidingTabStrip tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        // Attach the view pager to the tab strip
+        tabsStrip.setViewPager(mViewPager);
     }
 }

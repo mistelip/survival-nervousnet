@@ -15,4 +15,6 @@
     <color name="colorSupp">#ff9c5a</color>
     <color name="colorSurr">#ffc95a</color>
     <color name="colorExtra">#A8DF8C</color>
+
+    <color name="colorSoftButt">#ffbaa5</color>
 </resources>

@@ -14,10 +14,12 @@ import android.util.Log;
 
 public class TipsPagerAdapter extends FragmentStatePagerAdapter {
 
+    final int PAGE_COUNT = 3;
+    private String tabTitles[] = new String[] { "BEFORE", "DURING", "AFTER" };
+
     public TipsPagerAdapter(FragmentManager fm) {
         super(fm);
     }
-
 
     @Override
     public Fragment getItem(int position) {
@@ -30,23 +32,13 @@ public class TipsPagerAdapter extends FragmentStatePagerAdapter {
         return fragment;
     }
 
-
     @Override
     public int getCount() {
-        return 3;
+        return PAGE_COUNT;
     }
 
     @Override
     public CharSequence getPageTitle(int i) {
-        switch (i){
-            case 0:
-                return "BEFORE";
-            case 1:
-                return "DURING";
-            case 2:
-                return "AFTER";
-
-        }
-        return "";
+        return tabTitles[i];
     }
 }
