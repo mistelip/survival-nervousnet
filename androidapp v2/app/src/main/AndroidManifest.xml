@@ -23,7 +23,11 @@
             android:label="@string/title_activity_settings" />
         <activity android:name=".tipsActivities.TipsActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".tipsActivities.TornadoTipsActivity"></activity>
+        <activity android:name=".tipsActivities.TornadoTipsActivity" />
+        <activity android:name=".tipsActivities.EarthquakeTipsActivity" />
+        <activity android:name=".tipsActivities.HurricaneTipsActivity" />
+        <activity android:name=".tipsActivities.TsunamiTipsActivity" />
+        <activity android:name=".tipsActivities.TerroristTipsActivity"></activity>
     </application>
 
 </manifest>

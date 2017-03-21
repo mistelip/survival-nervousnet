@@ -32,6 +32,54 @@ public class TipsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Earthquake
+        LinearLayout earthButt = (LinearLayout) findViewById(R.id.earthquakeButt);
+        earthButt.setOnClickListener(new View.OnClickListener() {
+            //earthquake_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TipsActivity.this, EarthquakeTipsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
+        // Hurricane
+        LinearLayout hurricaneButt = (LinearLayout) findViewById(R.id.hurricaneButt);
+        hurricaneButt.setOnClickListener(new View.OnClickListener() {
+            //earthquake_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TipsActivity.this, HurricaneTipsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
+        // Tsunami
+        LinearLayout tsunamiButt = (LinearLayout) findViewById(R.id.tsunamiButt);
+        tsunamiButt.setOnClickListener(new View.OnClickListener() {
+            //earthquake_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TipsActivity.this, TsunamiTipsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
+        // Terrorist
+        LinearLayout terrButt = (LinearLayout) findViewById(R.id.terroristButt);
+        terrButt.setOnClickListener(new View.OnClickListener() {
+            //earthquake_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TipsActivity.this, TerroristTipsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
     }
 
 

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.irene.survival_v3.tipsActivities.TornadoTipsActivity">
+    tools:context="com.example.irene.survival_v3.tipsActivities.EarthquakeTipsActivity">
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/colorTor"
+        android:background="@color/colorEarth"
         app:pstsIndicatorColor="@color/colorPrimary"
         app:pstsShouldExpand="true"
         app:pstsTextAllCaps="true" />
@@ -21,6 +21,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white" />
-
 
 </LinearLayout>
