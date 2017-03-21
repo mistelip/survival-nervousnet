@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.irene.survival_v3.R;
 
@@ -21,8 +22,8 @@ public class TipsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tips);
 
         // Tornado
-        Button basicNeeds_butt = (Button) findViewById(R.id.tornadoButt);
-        basicNeeds_butt.setOnClickListener(new View.OnClickListener() {
+        LinearLayout tornadoButt = (LinearLayout) findViewById(R.id.tornadoButt);
+        tornadoButt.setOnClickListener(new View.OnClickListener() {
             //earthquake_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

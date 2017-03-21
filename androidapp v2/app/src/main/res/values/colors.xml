@@ -10,6 +10,8 @@
     <color name="colorEarth">#a1cc7c</color>
     <color name="colorTsu">#88b6e6</color>
     <color name="colorTerr">#f1aaaa</color>
+    <color name="colorTor">#B2B2B2</color>
+    <color name="colorHurr">#70949F</color>
 
     <color name="colorBasic">#FF6666</color>
     <color name="colorSupp">#ff9c5a</color>

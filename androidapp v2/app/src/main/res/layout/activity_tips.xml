@@ -10,68 +10,196 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.irene.survival_v3.tipsActivities.TipsActivity">
 
-    <Button
-        android:id="@+id/tornadoButt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="#ffbaa5"
-        android:elevation="19dp"
-        android:text="Button" />
-
-    <Button
+    <LinearLayout
         android:id="@+id/hurricaneButt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tornadoButt"
-        android:layout_marginTop="13dp"
-        android:background="#ffbaa5"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/terroristButt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/TsunamiButt"
-        android:layout_marginTop="11dp"
-        android:background="#ffbaa5"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/TsunamiButt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
+        android:background="@color/colorHurr"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:textAlignment="center"
+        android:layout_marginTop="22dp"
         android:layout_below="@+id/earthquakeButt"
-        android:layout_marginTop="13dp"
-        android:background="#ffbaa5"
-        android:text="Button" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-    <Button
+        <ImageView
+            android:id="@+id/hurricane_img"
+            android:layout_width="63dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/hurricane"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:id="@+id/hurricane_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.05"
+            android:text="      Hurricane"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/earthquakeButt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:background="#a1cc7c"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:textAlignment="center"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/tornadoButt"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/earthquake_img"
+            android:layout_width="69dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/earthquake" />
+
+        <TextView
+            android:id="@+id/earthquake_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.05"
+            android:text="      Earthquake"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tsunamiButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#88b6e6"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/hurricaneButt"
-        android:layout_marginTop="12dp"
-        android:background="#ffbaa5"
-        android:text="Button" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/tsunami_img"
+            android:layout_width="65dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/wave"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:id="@+id/tsunami_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.05"
+            android:text="      Tsunami/Floods"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terroristButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f1aaaa"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/tsunamiButt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/terrorist_img"
+            android:layout_width="65dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/bomb"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:id="@+id/terrorist_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.05"
+            android:text="      Terrorist attack"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tornadoButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTor"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/tornado_img"
+            android:layout_width="63dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/tornado" />
+
+        <TextView
+            android:id="@+id/tornado_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.05"
+            android:text="       Tornado"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+
+
 </RelativeLayout>
