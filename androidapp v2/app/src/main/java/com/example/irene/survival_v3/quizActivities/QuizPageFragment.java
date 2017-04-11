@@ -20,7 +20,9 @@ public class QuizPageFragment extends Fragment implements QuizFragmentInterface 
     private QuizViewPager viewPager;
     private View myView;
     private Question myQuestion;
+    private Question myQuestionBefore;
     private boolean newFragment = true;
+    private boolean unblocked =  false;
 
     public QuizPageFragment() {}
 
@@ -43,17 +45,31 @@ public class QuizPageFragment extends Fragment implements QuizFragmentInterface 
 
     @Override
     public void fragmentBecameVisible() {
-        // You can do your animation here because we are visible! (make sure onViewCreated has been called too and the Layout has been laid. Source for another question but you get the idea.
-        Log.d("#PafeFragment", "Fragment visible");
+        //Log.d("#PafeFragment", "Fragment visible");
 
-        if(newFragment){
-            myQuestion =  quizController.getNextQuestion();
+        // Set Last question or a new one
+        if(newFragment) {
+            Log.d("#PafeFragment", "NEW fragment");
+            myQuestionBefore = quizController.getCurrQuestion();
+            myQuestion = quizController.getNextQuestion();
             newFragment = false;
+        }else if(viewPager.lastSwipeLeft){
+            Log.d("#PafeFragment", "LEFT fragment");
+            myQuestion =  myQuestionBefore;
         }
 
-        // Last question not enable to swipe
+        //myQuestion =  quizController.getNextQuestion();
+        if(unblocked){
+            viewPager.setAllowedSwipeDirection(SwipeDirection.all);
+            //Log.d("#QuizPageFragment","Allow swipe ALL");
+        }else{
+            viewPager.setAllowedSwipeDirection(SwipeDirection.left);
+            //Log.d("#QuizPageFragment","Allow swipe LEFT");
+        }
+
+        // Last question can't swipe forward anymore
         if(quizController.isLastQuestion(myQuestion)){
-            //viewPager.setPagingEnabled(false);
+            viewPager.setAllowedSwipeDirection(SwipeDirection.left);
         }
 
         // Question title
@@ -135,18 +151,35 @@ public class QuizPageFragment extends Fragment implements QuizFragmentInterface 
                     currAnswer = id;
                     quizController.setCurrAnswer(currAnswer);
 
+                    // Uncheck all the other answers
+                    int unchecked = 0;
                     for (int i = 0; i < numAns; i++) {
                         if(i != id && answers.get(i).isChecked()){
                             answers.get(i).toggle();
+                        }else if(!answers.get(i).isChecked()){
+                            unchecked++;
                         }
                     }
-                    viewPager.setPagingEnabled(true);
+
+                    // only allow to swipe if is not the last and there is something checked
+                    if(!quizController.isLastQuestion(myQuestion) && unchecked != numAns){
+                        viewPager.setAllowedSwipeDirection(SwipeDirection.all);
+                        Log.d("#QuizPageFragment","Swipe ALL");
+                        unblocked = true;
+                    }else{
+                        viewPager.setAllowedSwipeDirection(SwipeDirection.left);
+                        Log.d("#QuizPageFragment","Swipe LEFT");
+                        unblocked = false;
+                    }
+
+                    //viewPager.setPagingEnabled(true);
                 }
 
             });
+
         }
 
-        //quizController.isLastQuestion(currQuestion);
+
 
     }
 

@@ -25,6 +25,7 @@ public class QuizController {
     public QuizController() {
         answerID = -2;
         loadQuestions();
+        currQuestion = questionMap.get("FIRST");
     }
 
     private void loadQuestions() {
@@ -80,8 +81,8 @@ public class QuizController {
         answerID = i;
     }
 
-    public int getCurrAnswer() {
-        return answerID;
+    public Question getCurrQuestion() {
+        return currQuestion;
     }
 
     public Question getNextQuestion() {

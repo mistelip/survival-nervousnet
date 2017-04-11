@@ -8,13 +8,18 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.example.irene.survival_v3.MapActivity;
 import com.example.irene.survival_v3.R;
 import com.example.irene.survival_v3.SettingsActivity;
 import com.example.irene.survival_v3.tipsActivities.TipsActivity;
 
+
+
 public class MainActivity extends AppCompatActivity {
+
 
     //SwipeAdapter swipeAdapter;
     QuizPagerAdapter mCustomPagerAdapter;
@@ -53,11 +58,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mViewPager.setAllowedSwipeDirection(SwipeDirection.all);
+
+
         //mViewPager = (CustomViewPager) findViewById(R.id.myViewPager);
         //swipeAdapter = new SwipeAdapter(getSupportFragmentManager(), quizController, mViewPager);
         //mViewPager.setAdapter(swipeAdapter);
 
-        mViewPager.setPagingEnabled(true);
+        //mViewPager.setPagingEnabled(true);
 
         // Swipe demo
         /*

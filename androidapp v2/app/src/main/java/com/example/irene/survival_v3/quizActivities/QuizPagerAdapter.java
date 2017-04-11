@@ -29,16 +29,16 @@ public class QuizPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         if(position == 0){
-            Log.d("#SwipeAdapter", "FIRST Fragment");
+            //Log.d("#SwipeAdapter", "FIRST Fragment");
             QuizPageFragmentInitial fragment = new QuizPageFragmentInitial();
             fragment.setViewPager(viewPager);
             return fragment;
         }else {
-            Log.d("#SwipeAdapter", "next Fragment");
+            //Log.d("#SwipeAdapter", "next Fragment");
             QuizPageFragment fragment = new QuizPageFragment();
             fragment.setQuizController(quizController);
             fragment.setViewPager(viewPager);
-            return fragment;
+           return fragment;
         }
 
         /*Log.d("#SwipeAdapter", "next Fragment loaded");

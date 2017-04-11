@@ -2,6 +2,7 @@ package com.example.irene.survival_v3.quizActivities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,13 @@ public class QuizPageFragmentInitial extends Fragment implements QuizFragmentInt
 
     @Override
     public void fragmentBecameVisible() {
-        viewPager.setPagingEnabled(true);
+        viewPager.setAllowedSwipeDirection(SwipeDirection.all);
+        /*
+        if(viewPager.lastSwipeLeft){
+            Log.d("#View Pager", "Detected swipe LEFT");
+        }else{
+            Log.d("#View Pager", "Detected swipe RIGHT");
+        }*/
         ImageView swipeImg = (ImageView) myView.findViewById(R.id.imageSwipe);
         swipeImg.setImageResource(R.drawable.swipe);
     }
